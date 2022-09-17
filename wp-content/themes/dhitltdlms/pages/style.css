@@ -48,3 +48,8 @@ a{color: #fff;text-decoration: none}
     margin-right: 41px;
     display: inline;
 }
+
+/* tabel */
+table a{
+    color: rgb(71, 41, 141);
+}
