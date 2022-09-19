@@ -1,29 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php   language_attributes() ?>>
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="<?php bloginfo('charset') ?>" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="./assets/css/bootstrap.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
-    />
-    <link
-      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css">
-    <title>DHIT LMS</title>
+    <meta name="description" content="<?php bloginfo('description') ?>" />
+    
+    <!-- linking styles assets from functions -->
+
+    <!-- hoock for admit ber -->
+    <?php wp_head(); ?>
+    <!-- title dynamic  using the hoock-->
+
   </head>
-  <body>
+  
+  <!-- ***************************** body start ************************  -->
+  <body <?php body_class(); ?>>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
       <div class="container">
-        <img src="./assets/img/dhitltdLogo.png" alt="dhitlogo" class="img-fluid" width="50px" height="auto">
+        <img src="<?php bloginfo('template_url'); ?>/assets/img/dhitltdLogo.png" alt="dhitlogo" class="img-fluid" width="50px" height="auto">
         <a href="#"></a>
         <button
           class="navbar-toggler"
@@ -71,7 +67,7 @@
           </div>
           <img
             class="img-fluid w-50 d-none d-sm-block"
-            src="img/showcase.svg"
+            src="<?php bloginfo('template_url'); ?>/assets/img/showcase.svg"
             alt=""
           />
         </div>
@@ -499,39 +495,7 @@
       </div>
     </section>
 
-    <!-- Contact & Map -->
-    <section class="p-5">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-md">
-            <h2 class="text-center mb-4">Contact Info</h2>
-            <ul class="list-group list-group-flush lead">
-              <li class="list-group-item">
-                <span class="fw-bold">Main Location:</span> 50 Main st Boston MA
-              </li>
-              <li class="list-group-item">
-                <span class="fw-bold">Enrollment Phone:</span> (555) 555-5555
-              </li>
-              <li class="list-group-item">
-                <span class="fw-bold">Student Phone:</span> (333) 333-3333
-              </li>
-              <li class="list-group-item">
-                <span class="fw-bold">Enrollment Email:</span> (555)
-                enroll@frontendbc.test
-              </li>
-              <li class="list-group-item">
-                <span class="fw-bold">Student Email:</span>
-                student@frontendbc.test
-              </li>
-            </ul>
-          </div>
-          <div class="col-md">
-            <div id="map"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    
     <!-- Gellery  -->
     <div class="container">
       <h1 class="fw-light text-center text-lg-start mt-4 mb-0">কিছু মুহূর্ত</h1>
@@ -583,82 +547,112 @@
     </div>
 
     <!-- Blog Content -->
-    <!-- Page Content -->
     <div class="container">
+      <!-- blog Heading -->
+      <h1 class="fw-light text-center text-lg-start mt-4 mb-0">ব্লগ পোর্টাল</h1>
+      <hr class="mt-2 mb-5">
 
-    <!-- Page Heading -->
-    <h1 class="fw-light text-center text-lg-start mt-4 mb-0">ব্লগ পোর্টাল</h1>
-    <hr class="mt-2 mb-5">
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="https://via.placeholder.com/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Project One</a>
+              </h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+                aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt,
+                dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="https://via.placeholder.com/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Project Two</a>
+              </h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod
+                odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="<?php bloginfo('template_url'); ?>/assets/img/dhitltdlogo.png" alt="sdfsdf"></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Project Three</a>
+              </h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error
+                quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure
+                perspiciatis mollitia recusandae vero vel quam!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
 
-    <div class="row">
-      <div class="col-lg-4 col-sm-6 mb-4">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="https://via.placeholder.com/700x400" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Project One</a>
-            </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
-              aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt,
-              dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-4">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="https://via.placeholder.com/700x400" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Project Two</a>
-            </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod
-              odio, gravida pellentesque urna varius vitae.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-4">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="https://via.placeholder.com/700x400" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Project Three</a>
-            </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error
-              quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure
-              perspiciatis mollitia recusandae vero vel quam!</p>
-          </div>
-        </div>
-      </div>
+      <!-- Blog Pagination -->
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+      </ul>
     </div>
-    <!-- /.row -->
 
-    <!-- Pagination -->
-    <ul class="pagination justify-content-center">
-      <li class="page-item">
-        <a class="page-link" href="#" aria-label="Previous">
-          <span aria-hidden="true">&laquo;</span>
-          <span class="sr-only">Previous</span>
-        </a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="#">1</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="#">2</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="#">3</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="#" aria-label="Next">
-          <span aria-hidden="true">&raquo;</span>
-          <span class="sr-only">Next</span>
-        </a>
-      </li>
-    </ul>
+    <!-- Contact & Map -->
+    <section class="p-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md">
+            <h2 class="text-center mb-4">Contact Info</h2>
+            <ul class="list-group list-group-flush lead">
+              <li class="list-group-item">
+                <span class="fw-bold">Main Location:</span> 50 Main st Boston MA
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Enrollment Phone:</span> (555) 555-5555
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Student Phone:</span> (333) 333-3333
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Enrollment Email:</span> (555)
+                enroll@frontendbc.test
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Student Email:</span>
+                student@frontendbc.test
+              </li>
+            </ul>
+          </div>
+          <div class="col-md">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    </div>
-    <!-- /.container -->
 
 
     <!-- Footer -->
@@ -906,20 +900,6 @@
       </div>
     </div>
 
-    <script
-      src="./assets/js/bootstrap.bundle.js"
-    ></script>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
-
-    <script>
-      mapboxgl.accessToken =
-        'pk.eyJ1IjoiYnRyYXZlcnN5IiwiYSI6ImNrbmh0dXF1NzBtbnMyb3MzcTBpaG10eXcifQ.h5ZyYCglnMdOLAGGiL1Auw'
-      var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
-        center: [-71.060982, 42.35725],
-        zoom: 18,
-      })
-    </script>
+    <?php wp_footer(); ?>
   </body>
 </html>
