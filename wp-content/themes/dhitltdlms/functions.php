@@ -18,11 +18,31 @@
 
         // lining the scripts file
         wp_enqueue_script('jsBootstrap', get_template_directory_uri() .'/assets/js/bootstrap.js', 
-        array(), '1.0.0', true );
+        array('jquery'), '1.0.0', true );
         wp_enqueue_script('jsMapbox-gl', get_template_directory_uri() .'/assets/js/mapbox-gl.js', 
-        array(), '1.0.0', true );
+        array('jquery'), '1.0.0', true );
         wp_enqueue_script('jsMapbox', get_template_directory_uri() .'/assets/js/mapbox.js', 
-        array(), '1.0.0', true );
+        array('jquery'), '1.0.0', true );
     }
     add_action('wp_enqueue_scripts','dhitltdlms_assets');
+
+
+    // custom post type 
+    function is_wp_error( $thing ) {
+        $is_wp_error = ( $thing instanceof WP_Error );
+    
+        if ( $is_wp_error ) {
+            /**
+             * Fires when `is_wp_error()` is called and its parameter is an instance of `WP_Error`.
+             *
+             * @since 5.6.0
+             *
+             * @param WP_Error $thing The error object passed to `is_wp_error()`.
+             */
+            do_action( 'is_wp_error_instance', $thing );
+        }
+    
+        return $is_wp_error;
+    }
+    
 ?>
